@@ -1,4 +1,4 @@
-import { Home, Info, Mail, ChevronDown, Beaker, FishingHook, ListCheck } from "lucide-react"
+import { Home, Info, Mail, ChevronDown, FishingHook, ListCheck } from "lucide-react"
 import { Link } from "react-router-dom"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 

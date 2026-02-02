@@ -25,14 +25,6 @@ function App() {
         </Routes>
     </ShadcnSidebar>
     
-    
-    
-    
-    
-    
-    
-    
-    
   );
 }
 
