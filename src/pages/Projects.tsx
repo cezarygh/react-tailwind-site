@@ -10,22 +10,22 @@ const cards = [
   {
     imageSrc: magusfilm,
     title: "Magus Film",
-    href: "https://www.aau.dk",
+    href: "https://magusfilm.com/frontpage/",
   },
   {
    imageSrc: unox,
     title: "Uno-X",
-    href: "https://www.aau.dk",
+    href: "https://www.unoxmobility.dk/privat",
   },
   {
   imageSrc: unox_no,
     title: "Uno-X NO",
-    href: "https://www.aau.dk",
+    href: "https://unox.no/",
   },
    {
     imageSrc: brandhouse,
     title: "Brandhouse",
-    href: "https://www.aau.dk",
+    href: "https://www.brandhouse.com/",
   }
   
 ];

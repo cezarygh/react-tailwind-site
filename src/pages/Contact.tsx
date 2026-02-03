@@ -9,7 +9,6 @@ const Contact = () => {
       </h2>
 
       <ContactAccordion />
-       <BookingSystem />
     </div>
   );
 };

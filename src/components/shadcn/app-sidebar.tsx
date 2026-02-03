@@ -1,6 +1,7 @@
 import { Home, Info, Mail, ChevronDown, FishingHook, ListCheck } from "lucide-react"
 import { Link } from "react-router-dom"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { useSidebar } from "@/components/shadcn/sidebar"
 
 import {
   Sidebar,
@@ -31,6 +32,15 @@ const demosItems =[
 ]
 
 export function AppSidebar() {
+  const { isMobile, setOpenMobile } = useSidebar()
+
+   const handleLinkClick = () => {
+    if (isMobile) {
+      setOpenMobile(false)
+    }
+  }
+
+
   return (
     <Sidebar>
       <SidebarContent>
@@ -43,7 +53,7 @@ export function AppSidebar() {
               {mainItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <Link to={item.url} className="flex items-center gap-2">
+                    <Link to={item.url} onClick={handleLinkClick} className="flex items-center gap-2">
                       <item.icon />
                       <span>{item.title}</span>
                     </Link>
@@ -70,7 +80,7 @@ export function AppSidebar() {
                   {showcaseItems.map((item) => (
                     <SidebarMenuItem key={item.title}>
                       <SidebarMenuButton asChild>
-                        <Link to={item.url} className="flex items-center gap-2 pl-2">
+                        <Link to={item.url}  onClick={handleLinkClick} className="flex items-center gap-2 pl-2">
                           <item.icon className="h-4 w-4" />
                           <span>{item.title}</span>
                         </Link>
@@ -99,7 +109,7 @@ export function AppSidebar() {
                   {demosItems.map((item) => (
                     <SidebarMenuItem key={item.title}>
                       <SidebarMenuButton asChild>
-                        <Link to={item.url} className="flex items-center gap-2 pl-2">
+                        <Link to={item.url}  onClick={handleLinkClick} className="flex items-center gap-2 pl-2">
                           <item.icon className="h-4 w-4" />
                           <span>{item.title}</span>
                         </Link>
