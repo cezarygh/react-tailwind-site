@@ -52,12 +52,13 @@ const BookingSystem = () => {
       {step === 1 && (
         <div className="space-y-4">
           <label className="block font-medium text-slate-700">Vælg dato:</label>
-          <input
-            type="date"
-            value={booking.date || ""}
-            onChange={(e) => updateBooking("date", e.target.value)}
-            className="w-full border border-slate-300 rounded px-4 py-2"
-          />
+        <input
+          type="date"
+          value={booking.date || ""}
+          onChange={(e) => updateBooking("date", e.target.value)}
+          className="w-full border border-slate-300 rounded px-4 py-2 
+                    appearance-none bg-white"
+        />
 
           <label className="block font-medium text-slate-700">Vælg tidspunkt:</label>
           <div className="grid grid-cols-3 gap-2">

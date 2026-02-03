@@ -15,11 +15,6 @@ body {
   @apply px-4 py-20;
 }
 
-input[type="date"] {
-  -webkit-appearance: none;
-  appearance: none;
-}
-
 
 @layer base {
   :root {
