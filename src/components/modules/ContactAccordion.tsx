@@ -7,9 +7,9 @@ interface ContactItem {
 }
 
 const contactData: ContactItem[] = [
-  { title: "Email", content: "hello@example.com" },
-  { title: "Phone", content: "+1 (555) 123-4567" },
-  { title: "Address", content: "123 Main Street, Copenhagen, Denmark" },
+  { title: "Email", content: "cezarygm@gmail.com" },
+  { title: "Phone", content: "Kontakt mig via e-mail." },
+  { title: "Address", content: "København SV" },
 ]
 
 const ContactAccordion = () => {
