@@ -1,5 +1,4 @@
 import ContactAccordion from "@/components/modules/ContactAccordion";
-import BookingSystem from "@/components/modules/BookingSystem"
 
 const Contact = () => {
   return (
