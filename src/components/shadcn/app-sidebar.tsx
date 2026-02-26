@@ -1,4 +1,4 @@
-import { Home, Info, Mail, ChevronDown, FishingHook, ListCheck } from "lucide-react"
+import { Home, Info, Mail, ChevronDown, FishingHook, ListCheck, Calendar } from "lucide-react"
 import { Link } from "react-router-dom"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { useSidebar } from "@/components/shadcn/sidebar"
@@ -29,6 +29,7 @@ const showcaseItems = [
 
 const demosItems =[
   { title: "To-Do List", url: "/toDoList", icon: ListCheck },
+  { title: "Chore Board", url: "https://weeklychores.vercel.app/", icon: Calendar },
 ]
 
 export function AppSidebar() {
