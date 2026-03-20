@@ -1,7 +1,20 @@
-import { Home, Info, Mail, ChevronDown, FishingHook, ListCheck, Calendar } from "lucide-react"
-import { Link } from "react-router-dom"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { useSidebar } from "@/components/shadcn/sidebar"
+import {
+  Home,
+  Info,
+  Mail,
+  ChevronDown,
+  FishingHook,
+  ListCheck,
+  Calendar,
+  Newspaper,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { useSidebar } from "@/components/shadcn/sidebar";
 
 import {
   Sidebar,
@@ -12,40 +25,47 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/shadcn/sidebar"
+} from "@/components/shadcn/sidebar";
 
 // Main menu items
 const mainItems = [
   { title: "Hjem", url: "/", icon: Home },
   { title: "Projekter", url: "/projects", icon: Info },
   { title: "Kontakt", url: "/contact", icon: Mail },
-]
+];
 
 // Showcase items
 const showcaseItems = [
   { title: "Hook - useState", url: "/useStateHook", icon: FishingHook },
   { title: "Hook - useReducer", url: "/useReducerHook", icon: FishingHook },
-]
+];
 
-const demosItems =[
+const demosItems = [
   { title: "To-Do List", url: "/toDoList", icon: ListCheck },
-  { title: "Chore Board", url: "https://weeklychores.vercel.app/", icon: Calendar },
-]
+  {
+    title: "Chore Board",
+    url: "https://weeklychores.vercel.app/",
+    icon: Calendar,
+  },
+  {
+    title: "Hacker News",
+    url: "https://hacker-news-goodtape.vercel.app/",
+    icon: Newspaper,
+  },
+];
 
 export function AppSidebar() {
-  const { isMobile, setOpenMobile } = useSidebar()
+  const { isMobile, setOpenMobile } = useSidebar();
 
-   const handleLinkClick = () => {
+  const handleLinkClick = () => {
     if (isMobile) {
-      setOpenMobile(false)
+      setOpenMobile(false);
     }
-  }
-
+  };
 
   return (
     <Sidebar>
       <SidebarContent>
-
         {/* Main pages */}
         <SidebarGroup>
           <SidebarGroupLabel>Quick access</SidebarGroupLabel>
@@ -54,7 +74,11 @@ export function AppSidebar() {
               {mainItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <Link to={item.url} onClick={handleLinkClick} className="flex items-center gap-2">
+                    <Link
+                      to={item.url}
+                      onClick={handleLinkClick}
+                      className="flex items-center gap-2"
+                    >
                       <item.icon />
                       <span>{item.title}</span>
                     </Link>
@@ -81,7 +105,11 @@ export function AppSidebar() {
                   {showcaseItems.map((item) => (
                     <SidebarMenuItem key={item.title}>
                       <SidebarMenuButton asChild>
-                        <Link to={item.url}  onClick={handleLinkClick} className="flex items-center gap-2 pl-2">
+                        <Link
+                          to={item.url}
+                          onClick={handleLinkClick}
+                          className="flex items-center gap-2 pl-2"
+                        >
                           <item.icon className="h-4 w-4" />
                           <span>{item.title}</span>
                         </Link>
@@ -110,7 +138,11 @@ export function AppSidebar() {
                   {demosItems.map((item) => (
                     <SidebarMenuItem key={item.title}>
                       <SidebarMenuButton asChild>
-                        <Link to={item.url}  onClick={handleLinkClick} className="flex items-center gap-2 pl-2">
+                        <Link
+                          to={item.url}
+                          onClick={handleLinkClick}
+                          className="flex items-center gap-2 pl-2"
+                        >
                           <item.icon className="h-4 w-4" />
                           <span>{item.title}</span>
                         </Link>
@@ -122,8 +154,7 @@ export function AppSidebar() {
             </CollapsibleContent>
           </SidebarGroup>
         </Collapsible>
-
       </SidebarContent>
     </Sidebar>
-  )
+  );
 }
